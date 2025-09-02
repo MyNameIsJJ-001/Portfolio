@@ -20,19 +20,27 @@ window.addEventListener("scroll", () => {
   progress.style.width = scrollPercent + "%";
 });
 
-
-// Theme toggle (persists in localStorage)
+// =====================
+// Theme toggle (Bulb version)
+// =====================
 (function themeToggle() {
-  const btn = document.getElementById('themeToggle');
+  const bulb = document.getElementById('bulb-toggle');
   const html = document.documentElement;
   const KEY = 'jj-theme';
 
   const apply = (mode) => html.setAttribute('data-bs-theme', mode);
-  const saved = localStorage.getItem(KEY);
-  if (saved) apply(saved);
 
-  if (btn) {
-    btn.addEventListener('click', () => {
+  // Load saved theme
+  const saved = localStorage.getItem(KEY);
+  if (saved) {
+    apply(saved);
+  } else {
+    apply('light'); // default theme
+  }
+
+  // Toggle on click
+  if (bulb) {
+    bulb.addEventListener('click', () => {
       const current = html.getAttribute('data-bs-theme') === 'dark' ? 'dark' : 'light';
       const next = current === 'dark' ? 'light' : 'dark';
       apply(next);
