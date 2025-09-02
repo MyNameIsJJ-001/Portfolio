@@ -39,15 +39,17 @@ window.addEventListener("scroll", () => {
   }
 
   // Toggle on click
-  if (bulb) {
-    bulb.addEventListener('click', () => {
+if (bulb) {
+  ["click", "touchstart"].forEach(evt => {
+    bulb.addEventListener(evt, (e) => {
+      e.preventDefault(); // prevent ghost clicks on touch
       const current = html.getAttribute('data-bs-theme') === 'dark' ? 'dark' : 'light';
       const next = current === 'dark' ? 'light' : 'dark';
       apply(next);
       localStorage.setItem(KEY, next);
     });
-  }
-})();
+  });
+}
 
 // Auto-highlight active nav link
 (function activeNav() {
