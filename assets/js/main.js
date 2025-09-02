@@ -38,20 +38,23 @@ window.addEventListener("scroll", () => {
     apply('light'); // default theme
   }
 
-  // Toggle on click
-if (bulb) {
-  ["click", "touchstart"].forEach(evt => {
-    bulb.addEventListener(evt, (e) => {
-      e.preventDefault(); // prevent ghost clicks on touch
-      const current = html.getAttribute('data-bs-theme') === 'dark' ? 'dark' : 'light';
-      const next = current === 'dark' ? 'light' : 'dark';
-      apply(next);
-      localStorage.setItem(KEY, next);
+  // Toggle on click/touch
+  if (bulb) {
+    ["click", "touchstart"].forEach(evt => {
+      bulb.addEventListener(evt, (e) => {
+        e.preventDefault();
+        const current = html.getAttribute('data-bs-theme') === 'dark' ? 'dark' : 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        apply(next);
+        localStorage.setItem(KEY, next);
+      });
     });
-  });
-}
+  }
+})();  // ✅ Now the function closes properly
 
+// =====================
 // Auto-highlight active nav link
+// =====================
 (function activeNav() {
   const path = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.navbar .nav-link').forEach(a => {
@@ -60,10 +63,15 @@ if (bulb) {
   });
 })();
 
+// =====================
 // Footer year
-document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+// =====================
+document.getElementById('year') &&
+  (document.getElementById('year').textContent = new Date().getFullYear());
 
+// =====================
 // Contact form -> WhatsApp redirect
+// =====================
 (function contactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -73,8 +81,7 @@ document.getElementById('year') && (document.getElementById('year').textContent 
     const name = data.get('name');
     const email = data.get('email');
     const message = data.get('message');
-    // EDIT: WhatsApp phone (already set)
-    const phone = '2348112052659';
+    const phone = '2348112052659'; // your WhatsApp
     const text = `Hi JJ, my name is ${name}.%0AEmail: ${email}%0A%0A${encodeURIComponent(message)}`;
     const url = `https://wa.me/${phone}?text=${text}`;
     window.open(url, '_blank');
