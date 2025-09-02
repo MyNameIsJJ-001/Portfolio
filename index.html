@@ -7,7 +7,7 @@
 <meta name="description" content="Hi, I’m JJ — I design, I create, I bring ideas to life. Graphics design, branding, and modern websites." />
 <meta name="keywords" content="JJ, Joshua Joseph Olakunle, graphics design, branding, website development, portfolio" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+<link rel="icon" type="image/png" href="assets/img/logo.png" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -31,16 +31,10 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
 
-    <title>Contact — JJ Portfolio</title>
+    <!-- EDIT: Page-specific title if desired -->
+    <title>Home — JJ Portfolio</title>
   </head>
   <body>
-
-    <!-- Bulb Toggle for Dark/Light Mode -->
-<div id="bulb-toggle">
-  <div class="rope"></div>
-  <i class="fa-solid fa-lightbulb"></i>
-</div>
-
 
     <!-- ================= PRELOADER ================= -->
 <div id="preloader" class="preloader">
@@ -50,6 +44,11 @@
 <!-- Scroll Progress Bar -->
 <div id="scroll-progress"></div>
 
+<!-- Bulb Toggle for Dark/Light Mode -->
+<div id="bulb-toggle">
+  <div class="rope"></div>
+  <i class="fa-solid fa-lightbulb"></i>
+</div>
 
     <!-- ================= NAVBAR (EDIT LINKS IF YOU RENAME FILES) ================= -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-bottom">
@@ -82,58 +81,158 @@
 </nav>
 
 
+    <!-- ================= HERO ================= -->
+    <header class="py-5 bg-gradient position-relative overflow-hidden">
+      <div class="gradient-blobs"></div>
+      <div class="container py-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7" data-aos="fade-up">
+            <!-- EDIT: Hero headline/subtext -->
+            <h1 class="display-5 fw-bold">Hi, I’m JJ — Graphics Designer &amp; Web Creator.</h1>
+            <p class="lead mt-3">I design, I create, I bring ideas to life.</p>
+            <div class="d-flex gap-3 mt-4">
+              <a href="https://wa.me/2348112052659?text=Hi%20JJ%21%20I%27d%20like%20to%20hire%20you." target="_blank" class="btn btn-primary btn-lg"><i class="fab fa-whatsapp me-2"></i>Hire Me</a>
+              <a href="portfolio.html" class="btn btn-outline-primary btn-lg">View My Work</a>
+            </div>
+          </div>
+          <div class="col-lg-5 text-center" data-aos="zoom-in">
+            <!-- Animated avatar/logo -->
+            <img src="assets/img/profilee.png"  alt="JJ profile" width="320" height="auto">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= QUICK INTRO ================= -->
     <section class="py-5">
       <div class="container">
-        <h1 class="h2 mb-4" data-aos="fade-up">Contact</h1>
-
-        <!-- ================= QUICK CONTACT BUTTONS ================= -->
-        <div class="row g-3 mb-4" data-aos="zoom-in">
-          <!-- EDIT: Buttons use your real contacts already -->
-          <div class="col-12 col-md-4">
-            <a class="btn btn-outline-dark w-100 py-3" href="mailto:jj.olakunle.dev@gmail.com"><i class="fa-regular fa-envelope me-2"></i>Gmail</a>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-8" data-aos="fade-up">
+            <!-- EDIT: Short intro paragraph -->
+            <p class="lead">I’m <strong>Joshua Joseph Olakunle</strong>, a creative who blends clean graphics, precise branding, and modern websites to help people and businesses look sharp and convert better.</p>
+            <a href="assets/JJ-CV.pdf" class="btn btn-dark" target="_blank"><i class="fa-regular fa-file-lines me-2"></i>View My CV</a>
           </div>
-          <div class="col-12 col-md-4">
-            <a class="btn btn-outline-dark w-100 py-3" href="tel:+2348112052659"><i class="fa-solid fa-phone me-2"></i>Call</a>
-          </div>
-          <div class="col-12 col-md-4">
-            <a class="btn btn-success w-100 py-3" target="_blank" href="https://wa.me/2348112052659"><i class="fab fa-whatsapp me-2"></i>WhatsApp</a>
+          <div class="col-lg-4 text-lg-end" data-aos="zoom-in">
+            <img src="assets/img/logo.png" width="100" height="100" class="opacity-75" alt="JJ logo">
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- ================= CONTACT FORM (REDIRECTS TO WHATSAPP) ================= -->
-        <div class="card shadow-sm" data-aos="fade-up">
-          <div class="card-body">
-            <h2 class="h5">Send a Message (WhatsApp Redirect)</h2>
-            <form id="contactForm">
-              <div class="row g-3">
-                <!-- EDIT: Form labels if needed -->
-                <div class="col-md-6">
-                  <label class="form-label">Name</label>
-                  <input type="text" class="form-control" name="name" placeholder="Your name" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Email</label>
-                  <input type="email" class="form-control" name="email" placeholder="your@email.com" required>
-                </div>
-                <div class="col-12">
-                  <label class="form-label">Message</label>
-                  <textarea class="form-control" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Send</button>
+    <!-- ================= SERVICES PREVIEW ================= -->
+    <section class="py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <h2 class="h3 m-0">Services</h2>
+          <a class="btn btn-outline-secondary btn-sm" href="services.html">See all</a>
+        </div>
+        <div class="row g-4">
+          <!-- EDIT: Service cards content in services.html too -->
+          <div class="col-md-6 col-lg-3" data-aos="zoom-in"><div class="card h-100 shadow-sm service-card">
+            <div class="card-body">
+              <i class="fa-solid fa-palette fa-2x mb-3"></i>
+              <h3 class="h5">Graphics Design</h3>
+              <p class="text-muted">Flyers, posters, business cards, social media kits.</p>
+              <a class="stretched-link" href="https://wa.me/2348112052659" target="_blank">Request via WhatsApp</a>
+            </div></div></div>
+          <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="50"><div class="card h-100 shadow-sm service-card">
+            <div class="card-body">
+              <i class="fa-solid fa-shapes fa-2x mb-3"></i>
+              <h3 class="h5">Branding & Logo</h3>
+              <p class="text-muted">Identity systems that are memorable and consistent.</p>
+              <a class="stretched-link" href="https://wa.me/2348112052659" target="_blank">Request via WhatsApp</a>
+            </div></div></div>
+          <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100"><div class="card h-100 shadow-sm service-card">
+            <div class="card-body">
+              <i class="fa-solid fa-code fa-2x mb-3"></i>
+              <h3 class="h5">Website Development</h3>
+              <p class="text-muted">Modern, responsive, fast, and SEO-ready websites.</p>
+              <a class="stretched-link" href="https://wa.me/2348112052659" target="_blank">Request via WhatsApp</a>
+            </div></div></div>
+          <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="150"><div class="card h-100 shadow-sm service-card">
+            <div class="card-body">
+              <i class="fa-solid fa-briefcase fa-2x mb-3"></i>
+              <h3 class="h5">Freelance / Remote</h3>
+              <p class="text-muted">Flexible engagement for startups and teams.</p>
+              <a class="stretched-link" href="https://wa.me/2348112052659" target="_blank">Request via WhatsApp</a>
+            </div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PORTFOLIO PREVIEW (SWIPER) ================= -->
+    <section class="py-5">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <h2 class="h3 m-0">Featured Graphics</h2>
+          <a class="btn btn-outline-secondary btn-sm" href="portfolio.html">See all</a>
+        </div>
+        <div class="swiper mySwiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <!-- EDIT: Replace sample slides with your PNGs in assets/img/portfolio/graphics -->
+            <div class="swiper-slide"><a href="assets/img/portfolio/graphics/sample1.jpg" class="glightbox"><img src="assets/img/portfolio/graphics/sample1.jpg" class="img-fluid rounded shadow-sm" alt=""></a></div>
+            <div class="swiper-slide"><a href="assets/img/portfolio/graphics/sample2.png" class="glightbox"><img src="assets/img/portfolio/graphics/sample2.png" class="img-fluid rounded shadow-sm" alt=""></a></div>
+            <div class="swiper-slide"><a href="assets/img/portfolio/graphics/sample4.png" class="glightbox"><img src="assets/img/portfolio/graphics/sample4.png" class="img-fluid rounded shadow-sm" alt=""></a></div>
+            <div class="swiper-slide"><a href="assets/img/portfolio/graphics/sample5.png" class="glightbox"><img src="assets/img/portfolio/graphics/sample5.png" class="img-fluid rounded shadow-sm" alt=""></a></div>
+            <div class="swiper-slide"><a href="assets/img/portfolio/graphics/sample3.png" class="glightbox"><img src="assets/img/portfolio/graphics/sample3.png" class="img-fluid rounded shadow-sm" alt=""></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS PREVIEW ================= -->
+    <section class="py-5 bg-body-tertiary">
+      <div class="container">
+        <h2 class="h3 mb-4">What Clients Say</h2>
+        <div class="swiper testimonialSwiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <!-- EDIT: Replace with real testimonials -->
+            <div class="swiper-slide">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-3">
+                    <img src="assets/img/testimonials/Logo/logo1.png" width="48" height="48" class="rounded-circle" alt="">
+                    <div>
+                      <h3 class="h6 m-0">Mr. Stuff</h3>
+                      <small class="text-muted">@H.O.I</small>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0">I so much love this idea, thanks bro u really did well........</p>
                 </div>
               </div>
-            </form>
+            </div>
+                        <div class="swiper-slide">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-3">
+                    <img src="assets/img/testimonials/Logo/logo2.png" width="48" height="48" class="rounded-circle" alt="">
+                    <div>
+                      <h3 class="h6 m-0">Engineer Shola Joshua</h3>
+                      <small class="text-muted">@Shokem</small>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0">JJ delivered fast and nailed the brief. Highly recommend!</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-3">
+                    <img src="assets/img/testimonials/Logo/logo3.png" width="48" height="48" class="rounded-circle" alt="">
+                    <div>
+                      <h3 class="h6 m-0">Damilola</h3>
+                      <small class="text-muted">@Darmi Crotchet</small>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0">Thank you soo much i love the Design. especially the business cards.</p>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
-
-        <!-- Optional: Google Map Embed -->
-        <!-- EDIT: Paste your map iframe below, or delete this block -->
-        <!--
-        <div class="ratio ratio-16x9 mt-4" data-aos="fade-up">
-          <iframe src="YOUR_GOOGLE_MAP_EMBED_URL" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        -->
       </div>
     </section>
 
