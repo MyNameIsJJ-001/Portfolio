@@ -4,36 +4,124 @@
 ====================== */
 
 :root {
+  --sky-blue: #87CEFA;
+  --ocean-blue: #1E3A8A;
+  --light-gray: #f3f6fa;
+  --dark-text: #1a1a1a;
+  --soft-white: #ffffff;
+}
+:root {
   /* Light theme */
-  --jj-bg: #ffffff;
-  --jj-text: #0f172a;
+  --jj-bg: #f3f6fa;
+  --jj-text: #1a1a1a;
   --jj-primary: #4353ff;
   --jj-muted: #64748b;
 }
 [data-bs-theme="dark"] {
   /* Dark theme */
-  --jj-bg: #0b1220;
+  --jj-bg: rgb(0, 18, 53);
   --jj-text: #e2e8f0;
   --jj-primary: #7c8cff;
   --jj-muted: #94a3b8;
 }
 
-/* Scroll Progress Bar */
-#scroll-progress {
+
+
+
+
+/* ============================
+   NAVBAR + PROGRESS BAR
+   ============================ */
+.custom-navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;               /* starts empty */
-  height: 5px;             /* adjust thickness */
-  background: linear-gradient(90deg, #007bff, #00c6ff);
-  z-index: 9999;
-  transition: width 0.25s ease-out;
-  border-radius: 0 2px 2px 0;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  z-index: 1500;
+  border-radius: 16px;
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(11, 26, 51, 0.9);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.45);
+  border: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
 }
+.custom-navbar .nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+}
+.custom-navbar .progress-wrap {
+  width: 100%;
+  padding: 0 14px 8px;
+  min-height: 6px;
+  box-sizing: border-box;
+}
+#nav-progress {
+  height: 6px;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--sky-blue), #0ea5e9, var(--ocean-blue));
+  box-shadow: 0 4px 12px rgba(14,165,233,0.12);
+  transition: width 80ms linear;
+}
+
+
+
+
+/* ============================
+   FLOATING CTA BUTTONS
+   ============================ */
+.floating-ctas a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+}
+.floating-ctas #whatsapp-btn {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
+}
+.floating-ctas #whatsapp-btn:hover {
+  transform: translateY(-2px) scale(1.07);
+  box-shadow: 0 5px 14px rgba(37,211,102,0.35);
+}
+.floating-ctas #call-btn {
+  background: linear-gradient(135deg, var(--ocean-blue), #0ea5e9);
+  color: #fff;
+}
+.floating-ctas #call-btn:hover {
+  transform: translateY(-2px) scale(1.07);
+  box-shadow: 0 5px 14px rgba(14,165,233,0.35);
+}
+.floating-ctas #mail-btn {
+  background: #f1f5f9;
+  color: var(--ocean-blue);
+}
+.floating-ctas #mail-btn:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px) scale(1.07);
+  box-shadow: 0 5px 14px rgba(30,58,138,0.25);
+}
+
+
+
 
 body {
   background: var(--jj-bg);
   color: var(--jj-text);
+  padding-top: calc(72px + 28px); /* ~navbar height + gap */
 }
 
 /* =====================
@@ -122,7 +210,7 @@ footer a:hover { opacity: 1 }
 /* Rope above bulb */
 #bulb-toggle .rope {
   width: 2px;
-  height: 40px;
+  height: 70px;
   background: #555;
 }
 
@@ -165,3 +253,34 @@ body.light-mode #bulb-toggle i {
   visibility: hidden;
   pointer-events: none; /* so it never blocks touches */
 }
+
+
+
+
+/* ============================
+   TYPED.JS FIXES
+   ============================ */
+    #greeting {
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    #subtyped {
+      display: block;
+      min-height: 2.4em;       /* space for 2 lines */
+      line-height: 1.6;
+      white-space: normal !important; 
+      overflow: visible !important;
+    }
+
+    .typed-cursor {
+      display: inline-block;
+      margin-left: 3px;
+      font-weight: 700;
+      opacity: 1;
+      animation: typed-blink 0.9s steps(2, start) infinite;
+    }
+
+    @keyframes typed-blink {
+      50% { opacity: 0; }
+    }
