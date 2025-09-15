@@ -9,6 +9,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/png" href="assets/img/logo.png" />
 
+
+
+  <!-- Typed.js (for the typing effect) this handles some javascript -->
+
+
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <!-- EDIT: OG title/description/image -->
@@ -41,44 +46,60 @@
   <img src="assets/img/logo.png" alt="JJ logo" width="64" height="64">
 </div>
 
-<!-- Scroll Progress Bar -->
-<div id="scroll-progress"></div>
 
-    <!-- ================= NAVBAR (EDIT LINKS IF YOU RENAME FILES) ================= -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-bottom">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-      <img src="assets/img/logo.png" alt="JJ" width="auto" height="28" class="rounded">
-      <!-- <span>JJ</span> -->
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <!-- Active state is auto-managed by main.js -->
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-      <div class="ms-lg-3">
+
+  <nav class="custom-navbar navbar navbar-dark navbar-expand-lg" role="navigation" aria-label="Main navigation">
+    <!-- top row: brand + toggler + links -->
+    <div class="nav-inner container d-flex align-items-center justify-content-between">
+      <a class="brand navbar-brand" href="#hero" aria-label="Home - JJ">
+        <img src="assets/img/logo.png" alt="JJ" width="auto" height="28" class="rounded">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center gap-3">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- progress bar area: the track is always visible; the fill (#nav-progress) grows -->
+    <div class="progress-wrap" aria-hidden="true">
+      <div class="progress-track">
+        <div id="nav-progress" class="progress-fill" style="width:0%"></div>
+      </div>
+    </div>
+          <div class="ms-lg-3">
         <!-- Dark/Light toggle button -->
         <!-- <button class="btn btn-outline-secondary btn-sm" id="themeToggle" aria-label="Toggle theme">
           <i class="fa-regular fa-moon me-1"></i> Theme
         </button> -->
       </div>
-    </div>
-  </div>
-</nav>
+  </nav>
 
-    <!-- Bulb Toggle for Dark/Light Mode -->
+
+
+
+
+
+
+
+
+<!-- Bulb Toggle for Dark/Light Mode -->
 <div id="bulb-toggle">
   <div class="rope"></div>
   <i class="fa-solid fa-lightbulb"></i>
 </div>
+
 
     <!-- ================= HERO ================= -->
     <header class="py-5 bg-gradient position-relative overflow-hidden">
@@ -86,9 +107,12 @@
       <div class="container py-5">
         <div class="row align-items-center g-4">
           <div class="col-lg-7" data-aos="fade-up">
-            <!-- EDIT: Hero headline/subtext -->
-            <h1 class="display-5 fw-bold">Hi, I’m JJ — Graphics Designer &amp; Web Creator.</h1>
-            <p class="lead mt-3">I design, I create, I bring ideas to life.</p>
+
+
+      <div class="col-lg-8 text-center text-lg-start">
+        <h1 id="greeting" class="mb-2" aria-live="polite"></h1>
+  <p id="subtyped" class="lead text-muted mb-3"></p></div>
+
             <div class="d-flex gap-3 mt-4">
               <a href="https://wa.me/2348112052659?text=Hi%20JJ%21%20I%27d%20like%20to%20hire%20you." target="_blank" class="btn btn-primary btn-lg"><i class="fab fa-whatsapp me-2"></i>Hire Me</a>
               <a href="portfolio.html" class="btn btn-outline-primary btn-lg">View My Work</a>
@@ -169,6 +193,7 @@
         <div class="swiper mySwiper" data-aos="fade-up">
           <div class="swiper-wrapper">
             <!-- EDIT: Replace sample slides with your PNGs in assets/img/portfolio/graphics -->
+             <div class="swiper-slide"><a href="assets/img/portfolio/graphics/sample1.jpg" class="glightbox"><img src="assets/img/portfolio/graphics/sample16.png" class="img-fluid rounded shadow-sm" alt=""></a></div>
             <div class="swiper-slide"><a href="assets/img/portfolio/graphics/sample1.jpg" class="glightbox"><img src="assets/img/portfolio/graphics/sample1.jpg" class="img-fluid rounded shadow-sm" alt=""></a></div>
             <div class="swiper-slide"><a href="assets/img/portfolio/graphics/sample2.png" class="glightbox"><img src="assets/img/portfolio/graphics/sample2.png" class="img-fluid rounded shadow-sm" alt=""></a></div>
             <div class="swiper-slide"><a href="assets/img/portfolio/graphics/sample4.png" class="glightbox"><img src="assets/img/portfolio/graphics/sample4.png" class="img-fluid rounded shadow-sm" alt=""></a></div>
@@ -251,27 +276,38 @@
   </div>
 </footer>
 
-    <!-- ================= FLOATING CTA BUTTONS (EDIT PHONE/EMAIL) ================= -->
-<div class="floating-cta">
-  <a class="cta-btn" href="https://wa.me/2348112052659?text=Hi%20JJ%2C%20I%20found%20your%20portfolio%20and%20want%20to%20hire%20you." target="_blank" rel="noopener" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+<!-- ✅ Fixed Version (Ready to Paste) -->
+<!-- ============================
+     Floating CTA Buttons
+============================ -->
+<div class="floating-ctas position-fixed end-0 bottom-0 p-3 d-flex flex-column gap-2" style="z-index:1500;">
+  <a id="whatsapp-btn" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" href="#" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp fa-lg"></i>
   </a>
-  <a class="cta-btn" href="tel:+2348112052659" aria-label="Call JJ">
-    <i class="fa-solid fa-phone"></i>
+
+  <a id="call-btn" class="btn btn-primary rounded-circle shadow d-flex align-items-center justify-content-center" href="#" aria-label="Call">
+    <i class="fa fa-phone fa-lg"></i>
   </a>
-  <a class="cta-btn" href="mailto:jj.olakunle.dev@gmail.com?subject=Portfolio%20Inquiry" aria-label="Email JJ">
-    <i class="fa-regular fa-envelope"></i>
+
+  <a id="mail-btn" class="btn btn-light rounded-circle shadow d-flex align-items-center justify-content-center" href="#" aria-label="Email">
+    <i class="fa fa-envelope fa-lg"></i>
   </a>
 </div>
+
 
     <!-- =============== JS LIBRARIES =============== -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<!-- Typed.js should be here -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 <script src="assets/js/swiper-init.js"></script>
 <script src="assets/js/glightbox-init.js"></script>
 <script src="assets/js/main.js"></script>
+
 
   </body>
 </html>
