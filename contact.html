@@ -51,35 +51,43 @@
 <div id="scroll-progress"></div>
 
 
-    <!-- ================= NAVBAR (EDIT LINKS IF YOU RENAME FILES) ================= -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-bottom">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-      <img src="assets/img/logo.png" alt="JJ" width="auto" height="28" class="rounded">
-      <!-- <span>JJ</span> -->
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <!-- Active state is auto-managed by main.js -->
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-      <div class="ms-lg-3">
+  <nav class="custom-navbar navbar navbar-dark navbar-expand-lg" role="navigation" aria-label="Main navigation">
+    <!-- top row: brand + toggler + links -->
+    <div class="nav-inner container d-flex align-items-center justify-content-between">
+      <a class="brand navbar-brand" href="#hero" aria-label="Home - JJ">
+        <img src="assets/img/logo.png" alt="JJ" width="auto" height="28" class="rounded">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center gap-3">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- progress bar area: the track is always visible; the fill (#nav-progress) grows -->
+    <div class="progress-wrap" aria-hidden="true">
+      <div class="progress-track">
+        <div id="nav-progress" class="progress-fill" style="width:0%"></div>
+      </div>
+    </div>
+          <div class="ms-lg-3">
         <!-- Dark/Light toggle button -->
         <!-- <button class="btn btn-outline-secondary btn-sm" id="themeToggle" aria-label="Toggle theme">
           <i class="fa-regular fa-moon me-1"></i> Theme
         </button> -->
       </div>
-    </div>
-  </div>
-</nav>
+  </nav>
 
 
     <section class="py-5">
