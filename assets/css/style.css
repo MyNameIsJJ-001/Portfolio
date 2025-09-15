@@ -121,7 +121,10 @@
 body {
   background: var(--jj-bg);
   color: var(--jj-text);
-  padding-top: calc(72px + 28px); /* ~navbar height + gap */
+}
+
+section {
+  margin-top: calc(72px + 28px); 
 }
 
 /* =====================
